@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int[] minBitwiseArray(List<Integer> nums) {
         int[] res = new int[nums.size()];
