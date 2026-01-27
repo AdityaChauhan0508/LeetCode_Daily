@@ -7,8 +7,10 @@ class Solution {
         for (int i = 0; i < n; i++) 
             adj[i] = new ArrayList<>();
 
-        for (int i = 0; i < edges.length; i++) {
-            int u = edges[i][0], v = edges[i][1], w = edges[i][2];
+        for (int[] edge : edges) {
+            int u = edge[0];
+            int v = edge[1];
+            int w = edge[2];
             adj[u].add(new int[]{v, w});
             adj[v].add(new int[]{u, 2 * w});
         }
