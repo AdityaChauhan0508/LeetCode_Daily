@@ -16,7 +16,6 @@ class Solution {
         k = k - 1;
 
         long currSum = 0;
-        long ans = Long.MAX_VALUE;
         int last = Math.min(dist+1, n-1);
         for (int i = 1; i <= last; i++) {
             currSum += nums[i];
@@ -29,7 +28,7 @@ class Solution {
             rem.add(idx);
         }
 
-        ans = currSum;
+        long ans = currSum;
 
         for (int r = dist + 2, l= 1; r < n; r++, l++) {
 
