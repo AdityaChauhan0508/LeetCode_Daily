@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     static class Node {
         int mn, mx, lz;
