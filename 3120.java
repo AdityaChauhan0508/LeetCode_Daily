@@ -1,17 +1,19 @@
-class Solution:
-    def numberOfSpecialChars(self, word: str) -> int:
+class Solution {
+    public int numberOfSpecialChars(String word) {
+
+        HashSet<Character> set = new HashSet<>();
+
+        for(char ch : word.toCharArray()) {
+            set.add(ch);
+        }
         
-        st = set(word)
+        int count = 0;
 
-        count = 0
-
-        for i in range(26):
-
-            lower = chr(ord('a') + i)
-
-            upper = chr(ord('A') + i)
-
-            if lower in st and upper in st:
-                count += 1
-
-        return count
+        for(char ch = 'a' ; ch <= 'z'; ch++) {
+            if(set.contains(ch) && set.contains(Character.toUpperCase(ch))) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
