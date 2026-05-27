@@ -17,15 +17,17 @@ public class prac1{
 
         sum = sum * r;
 
-        while(sum > 9) {
-            int ans = 0;
+        // while(sum > 9) {
+        //     int ans = 0;
 
-            while(sum > 0) {
-                ans += sum % 10;
-                sum /= 10;
-            }
-            sum = ans;
-        }
-        System.out.print(sum);
+        //     while(sum > 0) {
+        //         ans += sum % 10;
+        //         sum /= 10;
+        //     }
+        //     sum = ans;
+        // }
+
+        int result = (int) (1+(sum-1)%9);
+        System.out.print(result);
     }    
 }
